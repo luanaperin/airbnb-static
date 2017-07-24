@@ -1,10 +1,165 @@
----
-title: Le Wagon Middleman boilerplate
----
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+  <div class="banner-content">
+    <h1>WELCOME HOME</h1>
+      <p>
+        Rent unique places to stay from local hosts in 190+ countries.
+      </p>
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
+      <%= link_to "How it works", "#", class: "btn btn-primary btn-lg" %>
+
+  </div>
 </div>
+
+<form action="#">
+  <div class="form-group">
+    <label>Your email</label>
+    <input type="email" class="form-control" placeholder="luana.perin@gmail.com">
+  </div>
+  <div class="form-group">
+    <label>Your password</label>
+    <input type="password" class="form-control" placeholder="******">
+  </div>
+    <input type="submit" value="Sign In" class="btn btn-primary">
+</form>
+
+  <!-- Your features code -->
+
+
+
+
+  <div class="container text-center padded features">
+    <div class="row" id="emoji">
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+
+
+        <%= image_tag "globe.png" %>
+
+        <h2>Discover the world</h2>
+        <p>The earth is your new home.</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="images/dollar.png">
+        <h2>Pay online</h2>
+        <p>No cash issues anymore.</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="images/beer.png">
+        <h2>Meet people</h2>
+        <p>Discover new culture and lifestyle.</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="images/heart.png">
+        <h2>Share and love</h2>
+        <p>Join a community you will love.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper-grey padded">
+    <div class="container">
+      <h2 class="text-center">Your next trip</h2>
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg'); background-size: cover;">
+              <div class="card-category">Paris</div>
+              <div class="card-description">
+                <h2>Seb's home</h2>
+                <p>Charming room with patio</p>
+              </div>
+                <img class="card-user avatar avatar-large" src="images/seb.jpg">
+                <a class="card-link" href="#"></a>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg'); background-size: cover;">
+              <div class="card-category">Brussels</div>
+              <div class="card-description">
+                <h2>Romain's home</h2>
+                <p>Charming room with patio</p>
+              </div>
+                <img class="card-user avatar avatar-large" src="images/romain.jpeg">
+                <a class="card-link" href="#"></a>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg'); background-size: cover;">
+              <div class="card-category">London</div>
+              <div class="card-description">
+                <h2>Anne's home</h2>
+                <p>Charming room with patio</p>
+              </div>
+                <img class="card-user avatar avatar-large" src="images/anne.jpg">
+                <a class="card-link" href="#"></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Your newsletter code -->
+
+  <div class="text-center padded newsletter">
+      <h2>Get news from us</h2>
+      <p>Leave us your mail and get news from us</p>
+
+
+
+
+    <form class="form-inline text-center">
+    <div class="form-group">
+    <form action="https://formspree.io/luanakperin@gmail.com"
+method="POST">
+      <label for="exampleInputPosts2">Posts</label>
+      <input type="posts" name="name" class="form-control" id="exampleInputPosts2" placeholder="
+Enter your message here">
+
+      <label for="exampleInputEmail2">E-mail</label>
+      <input type="email" name="_replyto" class="form-control" id="exampleInputEmail2" placeholder="luana.perin@gmail.com">
+
+
+      <input type="submit" class="btn btn-primary" value="Send">
+      </div>
+    </form>
+  </form>
+
+<!-- Your map code -->
+  <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+    var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
+
+    var myOptions = {
+      zoom: 16,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: []
+
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "You are here!"
+    });
+    </script>
+
+
+
+<!-- Your footer code -->
+
+<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
